@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* Heart Button */
+.heart {
+    font-size: 50px;
+    color: black;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+    user-select: none;
+    position: relative;
+}
+
+/* Clicked Heart */
+.heart.liked {
+    color: red;
+    transform: scale(1.2);
+}
+
+/* Floating Hearts */
+.floating-heart {
+    position: absolute;
+    font-size: 20px;
+    color: red;
+    animation: floatUp 1.5s ease-out forwards;
+}
+
+@keyframes floatUp {
+    0% { opacity: 1; transform: translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateY(-100px) scale(1.5); }
+}
